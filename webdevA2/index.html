@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Bowling</title>
+    <!-- link to external stylesheet for custom styles-->
+    <link rel="stylesheet" href="style.css">
+    <!-- link to external javascript -->
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- index page header with nav tab that has buttons to go to respective sections -->
+        <h1 class="logo">Bowling</h1>
+
+        <nav class="navbar">
+            <button id="menuBtn">Open Menu</button>
+            <ul>
+                <li><button id="page1btn" class="active homeSprite">Intro</button></li>
+                <li><button id="page2btn" class="active ruleSprite">Rules</button></li>
+                <li><button id="page3btn" class="active">Equipment</button></li>
+                <li><button id="page4btn" class="active">Technique</button></li>
+                <li><button id="page5btn" class="active">Play Game</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page" id="page1">
+            <!-- introduction section that has an intro to bowling, brief history and types of bowling -->
+            <h2>Introduction</h2>
+            <article class="intro">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h3>What is bowling?</h3>
+                        <p>Bowling is a sport and recreational activity where a player rolls a heavy ball down a lane to
+                            knock down a set of pins. The standard and most popular form is 10-pin bowling, which uses
+                            10 pins arranged in a triangle at the end of the lane.</p>
+                    </div>
+                    <img src="images/bowlingbanner.jpeg" width="280" title="bowling banner" alt="bowling banner">
+                </div>
+            </article>
+            <h2>History</h2>
+            <article class="history">
+                <h3>Brief Overview</h3>
+                <div class="history-content">
+                    <img class="history-image" src="images/bowlingpin.jpg" title="bowling pin" alt="bowling pin1">
+                    <div class="history-text">
+                        <p>Bowling dates back over 5000 years, with origins traced to Ancient Egypt. The modern version
+                            of 10-pin bowling became popular in the United States in the late 19th century. Today,
+                            bowling is both a casual hobby and a professional sport with leagues, tournaments and
+                            televised championships.</p>
+                        <p>Fun fact: Despite its long history, bowling has not been officially included as a medal sport
+                            in the Olympic Games.</p>
+                    </div>
+                    <img class="history-image" src="images/bowlingpin.jpg" title="bowling pin" alt="bowling pin2">
+                </div>
+            </article>
+            <h2>Types</h2>
+            <article class="types">
+                <div class="types-content">
+                    <div class="types-text">
+                        <h3>Types of Bowling:</h3>
+                        <ol>
+                            <li>10-pin</li>
+                            <li>Candlepin</li>
+                            <li>Duckpin</li>
+                            <li>Five-pin</li>
+                        </ol>
+                    </div>
+                    <img src="images/bowlingtypes.png" width="250" title="bowling-types" alt="types-of-bowling">
+                    <img src="images/bowlingtypes2.jpg" width="250" title="bowling-types" alt="types-of-bowling2">
+                    <img src="images/bowlingtypes3.jpg" width="250" title="bowling-types" alt="types-of-bowling3">
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page2">
+            <h2>Rules</h2>
+            <article class="rules">
+                <div class="rules-content">
+                    <div class="rules-text">
+                        <h3>Rules:</h3>
+                        <p>The rules of 10-pin bowling are governed by the International Bowling Federation (IBF).</p>
+                        <p>Here are the main rules:</p>
+                        <ol>
+                            <li>A standard game has 10 frames. In each frame, you get 2 chances to knock down the pins.
+                                The objective is to knock down as many of the 10 pins as possible using a bowling ball.
+                            </li>
+                            <li>If you knock down all 10 pins on the first roll, it is called a strike and the frame
+                                ends with just one roll.</li>
+                            <li>If all 10 pins are knocked down using both rolls in a frame, it is called a spare. You
+                                receive bonus points equal to the number of pins knocked down in the next roll.</li>
+                            <li>In the 10th and last frame, if you get a strike or a spare, you are awarded 1 or 2 more
+                                extra rolls to complete scoring.</li>
+                            <li>If you cross the foul line while delivering the ball, it is considered a foul and no
+                                points are awarded for that roll.</li>
+                            <li>If the ball goes into the gutter or leaves the lane, no pins knocked down during that
+                                roll are counted.</li>
+                        </ol>
+                        <p>To learn more about the rules of bowling, click <a
+                                href="https://singaporebowling.org.sg/wp-content/uploads/2022/03/IBF-Rules1.pdf"
+                                target="_blank">here</a></p>
+                    </div>
+                    <div class="rules-video">
+                        <iframe src="https://www.youtube.com/embed/QAP0FEqFEQA" title="bowling rules"></iframe>
+                    </div>
+                </div>
+            </article>
+            <h2>Scoring</h2>
+            <article class="scoring">
+                <div class="scoring-content">
+                    <div class="scoring-text">
+                        <h3>How scoring works:</h3>
+                        <p>Scoring in bowling can be complex, but here are the basics:</p>
+                        <ul>
+                            <li>A strike is worth 10 points plus the total of your next two rolls.</li>
+                            <li>A spare is worth 10 points plus the total of your next roll.</li>
+                            <li>If you fail to knock down all 10 pins, you simply add up the number of pins you knocked
+                                down. This is called an "open frame".</li>
+                            <li>The maximum score for a single game of bowling is 300, which is achieved by rolling 12
+                                consecutive strikes.</li>
+                        </ul>
+                        <p>Example: If you roll a strike in frame 1, and then roll 4 and 5 in frame 2, you get 10 + 4 +
+                            5 = 19 points in frame 1.</p>
+                    </div>
+                    <figure>
+                        <img src="images/scoringsheet.jpg" height="250" alt="bowling score sheet" title="score sheet">
+                        <figcaption>An example of a score sheet</figcaption>
+                    </figure>
+                </div>
+            </article>
+            <h2>Terminology</h2>
+            <article>
+                <div class="terminology-table">
+                    <h3>Here are some of the terminology:</h3>
+                    <table>
+                        <tr>
+                            <th>Term</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>Gutter</td>
+                            <td>The area on either side of the lane where the ball can fall without hitting any pins,
+                                scoring 0.</td>
+                        </tr>
+                        <tr>
+                            <td>Split</td>
+                            <td>Pins are left standing with a gap in between them.</td>
+                        </tr>
+                        <tr>
+                            <td>Frame</td>
+                            <td>A single turn in bowling, consisting of one or two rolls of the ball.</td>
+                        </tr>
+                        <tr>
+                            <td>Spare</td>
+                            <td>When all 10 pins are knocked down with two rolls.</td>
+                        </tr>
+                        <tr>
+                            <td>Strike</td>
+                            <td>When all 10 pins are knocked down with the first roll of a frame.</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+            <h2>Quiz</h2>
+            <article class="quiz">
+                <fieldset>
+                    <legend>1. How many pins are used in a standard game of 10-pin bowling?</legend>
+                    <label><input type="radio" name="q1" value="5">5</label>
+                    <label><input type="radio" name="q1" value="10">10</label>
+                    <label><input type="radio" name="q1" value="12">12</label>
+                    <label><input type="radio" name="q1" value="15">15</label>
+                </fieldset>
+                <fieldset>
+                    <legend>2. What is it called when a player knocks down all 10 pins in 2 tries in a single frame?
+                    </legend>
+                    <label><input type="radio" name="q2" value="Strike">Strike</label>
+                    <label><input type="radio" name="q2" value="Split">Split</label>
+                    <label><input type="radio" name="q2" value="Spare">Spare</label>
+                    <label><input type="radio" name="q2" value="Miss">Miss</label>
+                </fieldset>
+                <fieldset>
+                    <legend>3. What is the term used when a player knocks down all 10 pins on the 1st roll of a frame?
+                    </legend>
+                    <label><input type="radio" name="q3" value="Strike">Strike</label>
+                    <label><input type="radio" name="q3" value="Gutter">Gutter</label>
+                    <label><input type="radio" name="q3" value="Hook">Hook</label>
+                    <label><input type="radio" name="q3" value="Spare">Spare</label>
+                </fieldset>
+                <fieldset>
+                    <legend>4. How many frames are there in a standard 10-pin bowling game?</legend>
+                    <label><input type="radio" name="q4" value="9">9</label>
+                    <label><input type="radio" name="q4" value="10">10</label>
+                    <label><input type="radio" name="q4" value="12">12</label>
+                    <label><input type="radio" name="q4" value="11">11</label>
+                </fieldset>
+                <fieldset>
+                    <legend>5. What is the maximum possible score in a perfect 10-pin bowling?</legend>
+                    <label><input type="radio" name="q5" value="200">200</label>
+                    <label><input type="radio" name="q5" value="250">250</label>
+                    <label><input type="radio" name="q5" value="300">300</label>
+                    <label><input type="radio" name="q5" value="500">500</label>
+                </fieldset>
+                <button id="submitBtn">Submit quiz</button>
+                <button id="resetQuizBtn">Reset quiz</button>
+                <h3 id="scoreBox">Not submitted</h3>
+            </article>
+        </section>
+        <section class="page" id="page3">
+            <h2>Equipment</h2>
+            <div class="equipment">
+                <div class="equipment-content">
+                    <div class="equipment-text">
+                        <p>Having the right equipment is important to enhance your performance.</p>
+                        <p>Here are some essential pieces of equipment:</p>
+                        <ul>
+                            <li>Bowling ball</li>
+                            <li>Bowling shoes</li>
+                            <li>Bowling bag which may contain accessories like wrist supports, tape, and a towel.</li>
+                        </ul>
+                        <p>Check out this <a href="https://singaporebowling.org.sg/bowling-pro-shops"
+                                target="_blank">link</a> to purchase bowling equipment</p>
+                    </div>
+                    <div class="slider">
+                        <div class="slides">
+                            <img class="slide" src="images/bowlingball_big.jpg" srcset="images/bowlingball_small.jpg 450w, images/bowlingball_big.jpg 894w" sizes="(max-width: 800px) 250px, 350px" alt="bowlingBall">
+                            <img class="slide" src="images/bowlingshoes_big.jpg" srcset="images/bowlingshoes_small.jpg 450w, images/bowlingshoes_big.jpg 894w" sizes="(max-width: 800px) 250px, 350px" alt="bowlingShoes">
+                            <img class="slide" src="images/bowlingbag_big.jpg" srcset="images/bowlingbag_small.jpg 450w, images/bowlingbag_big.jpg 894w" sizes="(max-width: 800px) 250px, 350px" alt="bowlingBag">
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                        <div class="dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="page4">
+            <h2>Technique</h2>
+            <div class="technique-intro-content">
+                <p>Bowling involves more than just rolling a ball down a lane, proper technique makes a huge difference
+                    in control, power and accuracy. Techniques may vary by delivery style, grip, personal preference.
+                    Below are some of the core techniques used by bowlers.</p>
+            </div>
+            <div class="accordion">
+                <h3>Shot Types</h3>
+                <div class="accordion-text">
+                    <p>There are many shot types. Some of them are:</p>
+                </div>
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Straight Shot</h4>
+                            <div class="accordion-content">
+                                <p>The straight shot is the most basic type of shot in bowling. The bowler rolls the
+                                    ball straight down the lane without any spin. This shot is ideal for beginners as it
+                                    is easier to control and aim.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Hook Shot</h4>
+                            <div class="accordion-content">
+                                <p>The hook shot is a more advanced technique where the bowler applies spin to the ball,
+                                    causing it to curve as it rolls down the lane. This shot can help increase accuracy
+                                    and pin action, making it a popular choice among experienced bowlers.</p>
+                                <img src="images/hook_shot.jpg" width="350" alt="hookShot" title="HookShot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Backup Shot</h4>
+                            <div class="accordion-content">
+                                <p>The backup shot is a technique where the bowler rolls the ball with reverse spin,
+                                    causing it to curve in the opposite direction of a hook shot. This shot can be
+                                    useful for hitting specific pin combinations or for making adjustments during a
+                                    game.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion">
+                <h3>Delivery Styles</h3>
+                <div class="accordion-text">
+                    <p>There are several delivery styles in bowling, each affecting ball speed, spin and hook potential.
+                        Some of the delivery styles are:</p>
+                </div>
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Stroker</h4>
+                            <div class="accordion-content">
+                                <p>The stroker delivery style is characterised by a smooth, classic form with minimal
+                                    shoulder rotation. This style is often used by bowlers who focus on accuracy and
+                                    repeatability rather than power. This style is ideal for consistent scoring and
+                                    spare pickups.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Cranker</h4>
+                            <div class="accordion-content">
+                                <p>The cranker delivery style is known for its high energy and explosive movement,
+                                    involving heavy wrist action, open shoulders and a high backswing. This style is
+                                    often used by bowlers who want to maximize their hook potential and create more pin
+                                    action.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Tweener</h4>
+                            <div class="accordion-content">
+                                <p>The tweener delivery style is a hybrid of the stroker and cranker styles, combining
+                                    elements of both to create a versatile approach. This style allows bowlers to adjust
+                                    their technique based on lane conditions and personal preferences, making it a
+                                    popular choice among competitive bowlers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Two-handed delivery</h4>
+                            <div class="accordion-content">
+                                <p>The two-handed delivery style involves using both hands to deliver the ball,
+                                    providing increased control and revs. This style is often used by bowlers who want
+                                    to generate a high hook potential and is becoming increasingly popular in
+                                    professional bowling. This style was widely popularised by Jason Belmonte.</p>
+                                <figure>
+                                    <img src="images/twohanded_delivery_big.jpg" srcset="images/twohanded_delivery_small.jpg 775w, images/twohanded_delivery_big.jpg 1242w" sizes="(max-width: 800px) 250px, 450px" alt="twohandedDelivery"> 
+                                    <figcaption>Jason Belmonte using the two-handed delivery</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>No-thumb delivery</h4>
+                            <div class="accordion-content">
+                                <p>The no-thumb delivery style involves the bowler removing their thumb from the ball
+                                    during the release, allowing for increased revs and a more significant hook. This
+                                    style requires a high level of skill and control, as it can be challenging to
+                                    master. This style is commonly used by advanced one-handed players like Tom
+                                    Daugherty.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Spinner style</h4>
+                            <div class="accordion-content">
+                                <p>The spinner style is a unique delivery technique where the bowler rolls the ball with
+                                    a high amount of spin, causing it to rotate rapidly as it travels down the lane.
+                                    This style is often used for specific shot types, such as the backup shot, and can
+                                    be effective in certain situations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion">
+                <h3>Grips</h3>
+                <div class="accordion-text">
+                    <p>Gripping styles also affect ball control and spin. Here are some gripping styles:</p>
+                </div>
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Conventional grip</h4>
+                            <div class="accordion-content">
+                                <p>The conventional grip is the most common grip used in bowling, where the bowler
+                                    inserts their fingers into the holes of the ball and places their thumb in the thumb
+                                    hole. This grip provides a secure hold on the ball and allows for a smooth release.
+                                    This is commonly used among beginners and recreational bowlers.</p>
+                                <img src="images/grip_one.jpg" alt="conventionalgrip" title="conventionalGrip">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Fingertip grip</h4>
+                            <div class="accordion-content">
+                                <p>The fingertip grip is a technique where the bowler's fingers are inserted into the
+                                    ball's holes up to the first knuckle, while the thumb is fully inserted. This grip
+                                    allows for increased revs and a more significant hook potential, making it a popular
+                                    choice among more experienced bowlers.</p>
+                                <img src="images/grip_two.jpg" alt="fingertipgrip" title="fingertipGrip">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h4>Thumbless grip</h4>
+                            <div class="accordion-content">
+                                <p>The thumbless grip is a technique where the bowler removes their thumb from the ball
+                                    during the release. This is often part of the two-handed or no-thumb deliveries,
+                                    allowing maximum spin. This grip requires a high level of skill and control, as it
+                                    can be challenging to master. This grip is commonly used by advanced one-handed
+                                    players.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <article class="form">
+                <div class="form-content">
+                    <div class="form-text">
+                        <h3>Form</h3>
+                        <p>Proper form is crucial for effective bowling. Here are some key elements of good bowling
+                            form:</p>
+                        <ul>
+                            <li>Stable stance: Start balanced with the ball at the waist or chest height.</li>
+                            <li>Smooth approach: Usually 4 or 5 steps leading to the foul line.</li>
+                            <li>Controlled swing: Arm swings like a pendulum; timing is crucial.</li>
+                            <li>Clean release: Let the ball roll off your fingers at the bottom of the swing.</li>
+                            <li>Follow through: Arm should continue upward in the direction of your aim, helping with
+                                accuracy and consistency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="page" id="page5">
+            <h2 class="message hidden" id="message">Strike!</h2>
+            <div id="controls">
+                <button id="resetBtn">Reset</button>
+                <button id="spawnBtn">Spawn Pins</button>
+            </div>
+            <div class="pins-wrapper" id="pins-wrapper">
+            </div>
+            <div class="lane" id="lane"></div>
+            <div class="ball" id="ball"></div>
+            <div class="ball-guide" id="guide"></div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- footer with an image of a qr code to scan for mobile view, 2 buttons: 1 to enter full screen and 1 to exit full screen -->
+        <p>&copy; 2025 Lab01 Wong Sze Yee 250384T</p>
+        <figure class="qrCodeImg">
+            <img id="qrCode" src="images/qrcode" alt="QRCode">
+            <figcaption>Scan QR code to view the website on mobile!</figcaption>
+        </figure>
+        <button id="btnFS">Enter Full Screen</button>
+        <button id="btnWS">Exit Full Screen</button>
+    </footer>
+</body>
+
+</html>
