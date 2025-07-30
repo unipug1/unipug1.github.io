@@ -694,7 +694,7 @@ td {
         right: 70px;
     }
 
-    .imgAlign img, .footerText {
+    .imgAlign img, .footerText figcaption {
         display: none;
     }
 }
