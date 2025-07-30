@@ -391,6 +391,10 @@ td {
 }
 
 /* qr code css */
+.qrCodeImg figcaption, .qrCodeImg img {
+    display: block;
+}
+
 .imgAlign {
     display: flex;
     justify-content: center;
