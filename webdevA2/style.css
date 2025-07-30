@@ -390,6 +390,12 @@ td {
     max-height: 100%;
 }
 
+/* qr code css */
+.imgAlign {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 800px) {
 
     nav ul li {
@@ -501,6 +507,10 @@ td {
 
     .next {
         right: 70px;
+    }
+
+    .qrCodeImg {
+        display: none;
     }
 }
 
