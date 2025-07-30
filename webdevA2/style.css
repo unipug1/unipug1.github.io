@@ -377,7 +377,7 @@ td {
 .accordion-content {
     display: none;
     max-height: 0;
-    transition: ease 0.5s;
+    transition: max-height ease 0.6s;
     padding: 10px;
     overflow: hidden;
     background-color: #D4C9BE;
@@ -391,135 +391,13 @@ td {
 }
 
 /* qr code css */
-.qrCodeImg figcaption, .qrCodeImg img {
-    display: block;
-}
-
 .imgAlign {
     display: flex;
     justify-content: center;
 }
 
-@media (max-width: 800px) {
-
-    nav ul li {
-        display: block;
-    }
-
-    #menuBtn {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-    }
-
-    h1 {
-        font-size: 1.7em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1.3em;
-    }
-
-    h4 {
-        font-size: 1.1em;
-    }
-
-    p,
-    li,
-    figcaption {
-        font-size: 1em;
-    }
-
-    footer {
-        margin: 60px 20px 20px 20px;
-    }
-
-    .intro,
-    .types,
-    .equipment,
-    .rules,
-    .scoring,
-    .quiz,
-    .terminology-table,
-    .technique-intro-content,
-    .accordion-text,
-    .form {
-        margin: 20px 20px 20px 20px;
-    }
-
-    .intro-content,
-    .types-content,
-    .equipment-content,
-    .rules-content,
-    .scoring-content,
-    .technique-intro-content,
-    .accordion-text,
-    .form-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro-text,
-    .types-text,
-    .equipment-text,
-    .rules-text,
-    .scoring-text,
-    .accordion-text,
-    .form-text {
-        align-items: center;
-        text-align: center;
-        flex: 100%;
-    }
-
-    .intro img {
-        margin-left: 0;
-    }
-
-    .types img {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .accordion-item {
-        flex: 1 1 100%;
-    }
-
-    fieldset,
-    table,
-    th,
-    td,
-    #submitBtn,
-    #resetQuizBtn,
-    #scoreBox {
-        font-size: 0.9em;
-    }
-
-    legend {
-        font-size: 1em;
-    }
-
-    .prev {
-        left: 70px;
-    }
-
-    .next {
-        right: 70px;
-    }
-
-    .qrCodeImg figcaption, .qrCodeImg img {
-        display: none;
-    }
-}
-
-.menuShow {
-    display: block;
+#btnFS, #btnWS {
+    font-size: 1.1em;
 }
 
 /* css for bowling game */
@@ -701,4 +579,126 @@ td {
 #spawnBtn {
     font-weight: bold;
     padding: 8px 16px;
+}
+
+@media (max-width: 800px) {
+
+    nav ul li {
+        display: block;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p,
+    li,
+    figcaption {
+        font-size: 1em;
+    }
+
+    footer {
+        margin: 60px 20px 20px 20px;
+    }
+
+    .intro,
+    .types,
+    .equipment,
+    .rules,
+    .scoring,
+    .quiz,
+    .terminology-table,
+    .technique-intro-content,
+    .accordion-text,
+    .form {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .intro-content,
+    .types-content,
+    .equipment-content,
+    .rules-content,
+    .scoring-content,
+    .technique-intro-content,
+    .accordion-text,
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text,
+    .types-text,
+    .equipment-text,
+    .rules-text,
+    .scoring-text,
+    .accordion-text,
+    .form-text {
+        align-items: center;
+        text-align: center;
+        flex: 100%;
+    }
+
+    .intro img {
+        margin-left: 0;
+    }
+
+    .types img {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .accordion-item {
+        flex: 1 1 100%;
+    }
+
+    fieldset,
+    table,
+    th,
+    td,
+    #submitBtn,
+    #resetQuizBtn,
+    #scoreBox {
+        font-size: 0.9em;
+    }
+
+    legend {
+        font-size: 1em;
+    }
+
+    .prev {
+        left: 70px;
+    }
+
+    .next {
+        right: 70px;
+    }
+
+    .imgAlign img, .footerText {
+        display: none;
+    }
+}
+
+.menuShow {
+    display: block;
 }
