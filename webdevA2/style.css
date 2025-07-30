@@ -509,7 +509,7 @@ td {
         right: 70px;
     }
 
-    .qrCodeImg {
+    .qrCodeImg figcaption, .qrCodeImg img {
         display: none;
     }
 }
