@@ -1,0 +1,690 @@
+/* nunito-sans font family from dafont.com */
+@font-face {
+    font-family: "Nunito Sans";
+    src: url('fonts/NunitoSans_10pt-Regular.ttf') format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url('fonts/NunitoSans_10pt-Bold.ttf') format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url('fonts/NunitoSans_10pt-SemiBold.ttf') format("truetype");
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    /* all margins: 0 */
+    padding: 0;
+    /* all padding: 0 */
+    box-sizing: border-box;
+    /* include padding and border within element total width and height */
+    text-decoration: none;
+    /* no text underline */
+    font-family: 'Nunito Sans', sans-serif;
+    /* primary font: nunito sans, fallback to sans-serif */
+    list-style-position: inside;
+}
+
+body {
+    background-color: #F1EFEC;
+}
+
+.page {
+    width: 100%;
+    /* adjust width to be 100% of viewport */
+    height: 100%;
+    /* set height to 100% of viewport height */
+}
+
+header {
+    width: 100%;
+    /* adjust width to be 100% of its container */
+    padding: 1rem 9%;
+    /* top and bottom padding: 1rem, left and right padding: 9% */
+    display: flex;
+    /* uses flexbox */
+    justify-content: space-between;
+    /* distribute space evenly between items */
+    align-items: center;
+    /* vertically center items within header */
+}
+
+nav button {
+    width: 150px;
+    height: 45px;
+    font-size: 1em;
+}
+
+nav button::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url('images/css_sprites.png');
+    background-repeat: no-repeat;
+}
+
+nav button.homeSprite::before {
+    width: 35px;
+    height: 35px;
+    background-position: -10px -10px;
+}
+
+nav button.ruleSprite::before {
+    width: 35px;
+    height: 35px;
+    background-position: -65px -10px;
+}
+
+nav button:hover {
+    background-color: #123458;
+    /* change background color on hover */
+    color: white;
+    /* change text color on hover */
+}
+
+h1 {
+    color: #030303;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+h2 {
+    color: #123458;
+    text-align: center;
+    /* align text to center */
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+}
+
+h3 {
+    color: #030303;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+h4 {
+    color: #030303;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+p,
+li,
+figcaption {
+    color: #030303;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+figcaption {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+#menuBtn {
+    display: none;
+}
+
+footer {
+    margin: 80px 80px 20px 120px;
+}
+
+.intro,
+.types,
+.equipment,
+.rules,
+.scoring,
+.terminology-table,
+.technique-intro-content,
+.accordion-text,
+.form,
+.quiz {
+    margin: 20px 80px 20px 120px;
+}
+
+.intro-content,
+.types-content,
+.equipment-content,
+.rules-content,
+.scoring-content,
+.technique-intro-content,
+.accordion-text,
+.form-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.intro-text,
+.types-text,
+.equipment-text,
+.rules-text,
+.scoring-text,
+.form-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.intro img,
+.types img {
+    margin-left: 50px;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.types img {
+    margin-left: 30px;
+}
+
+.history-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.history h3 {
+    text-align: center;
+}
+
+.history-text {
+    max-width: 500px;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.history img {
+    width: auto;
+    height: 200px;
+}
+
+.equipment-text {
+    flex: 1;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    flex: 1;
+}
+
+.slides {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D4C9BE;
+}
+
+.slider img {
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.0s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.dots {
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* css for quiz */
+fieldset,
+#submitBtn,
+#resetQuizBtn,
+#scoreBox {
+    font-size: 1.1em;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.rules-text {
+    flex: 1;
+}
+
+.rules-text ol {
+    text-align: center;
+}
+
+.rules-video {
+    flex: 1;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    width: 65%;
+    height: auto;
+    padding-top: 36.56%;
+    margin-left: 30px;
+}
+
+.rules-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.scoring-content figure {
+    margin-left: 30px;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.1em;
+}
+
+/* technique section */
+#page4 h3 {
+    text-align: center;
+}
+
+.technique-intro-content {
+    text-align: center;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.accordion-item {
+    margin-bottom: 5px;
+    flex: 0 1 calc(50% - 10px);
+    padding: 1rem;
+}
+
+.accordion-header {
+    padding: 10px;
+    background-color: #D4C9BE;
+    cursor: pointer;
+    text-align: center;
+}
+
+.accordion-content {
+    display: none;
+    max-height: 0;
+    transition: ease 0.5s;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #D4C9BE;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.accordion-content.active {
+    display: block;
+    max-height: 100%;
+}
+
+@media (max-width: 800px) {
+
+    nav ul li {
+        display: block;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+    }
+
+    p,
+    li,
+    figcaption {
+        font-size: 1em;
+    }
+
+    footer {
+        margin: 60px 20px 20px 20px;
+    }
+
+    .intro,
+    .types,
+    .equipment,
+    .rules,
+    .scoring,
+    .quiz,
+    .terminology-table,
+    .technique-intro-content,
+    .accordion-text,
+    .form {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .intro-content,
+    .types-content,
+    .equipment-content,
+    .rules-content,
+    .scoring-content,
+    .technique-intro-content,
+    .accordion-text,
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text,
+    .types-text,
+    .equipment-text,
+    .rules-text,
+    .scoring-text,
+    .accordion-text,
+    .form-text {
+        align-items: center;
+        text-align: center;
+        flex: 100%;
+    }
+
+    .intro img {
+        margin-left: 0;
+    }
+
+    .types img {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .accordion-item {
+        flex: 1 1 100%;
+    }
+
+    fieldset,
+    table,
+    th,
+    td,
+    #submitBtn,
+    #resetQuizBtn,
+    #scoreBox {
+        font-size: 0.9em;
+    }
+
+    legend {
+        font-size: 1em;
+    }
+
+    .prev {
+        left: 70px;
+    }
+
+    .next {
+        right: 70px;
+    }
+}
+
+.menuShow {
+    display: block;
+}
+
+/* css for bowling game */
+#page5 h2 {
+    color: #030303;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.message {
+    position: absolute;
+    width: 100px;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 300px;
+    left: calc(50% - 50px);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.pins-wrapper {
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    height: fit-content;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 25px;
+}
+
+.lane {
+    position: relative;
+    top: -150px;
+    height: 500px;
+    width: 300px;
+    background-color: bisque;
+    margin: auto;
+    transform: perspective(100px) rotateX(10deg);
+    z-index: -1;
+}
+
+.pin {
+    margin: 5px;
+    height: 50px;
+    width: 30px;
+    border-radius: 50% 50% 40% 40%;
+    border: solid black;
+    background: radial-gradient(white 0 50%, gray 90%);
+}
+
+.pin::before {
+    display: block;
+    position: relative;
+    top: -32px;
+    left: 1px;
+    content: '';
+    height: 20px;
+    width: 20px;
+    border: solid black;
+    border-radius: 50%;
+    background: radial-gradient(white 0 50%, gray 90%);
+}
+
+.pin::after {
+    display: block;
+    position: relative;
+    content: '';
+    top: -35px;
+    left: 5px;
+    width: 12px;
+    height: 14px;
+    background: linear-gradient(90deg, gray 2%, transparent 30% 70%, gray 96%), linear-gradient(white 0 30%, red 30% 40%, white 40% 60%, red 60% 70%, white 70%);
+    border: solid black;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.ball {
+    position: absolute;
+    top: 400px;
+    left: calc(50% - 30px);
+    height: 60px;
+    width: 60px;
+    background: radial-gradient(ellipse at right bottom, white, blue, black);
+    border-radius: 50%;
+    border: solid black;
+    cursor: grab;
+    z-index: 1;
+}
+
+.ball:active {
+    cursor: grabbing;
+}
+
+.ball::after {
+    display: block;
+    position: relative;
+    content: '..';
+    transform: rotate(45deg);
+    word-wrap: break-word;
+    height: 30px;
+    width: 20px;
+    border-radius: 50%;
+    color: white;
+    font-size: 40px;
+    top: 10px;
+    left: 20px;
+}
+
+.ball-guide {
+    background-color: powderblue;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 400px;
+    left: calc(50% - 5px);
+}
+
+.fall-left {
+    animation-name: fall-left;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.fall-right {
+    animation-name: fall-right;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.roll {
+    animation-name: roll;
+    animation-duration: 2s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fall-left {
+    to {
+        transform: rotateZ(-90deg) translateY(-100px);
+    }
+}
+
+@keyframes fall-right {
+    to {
+        transform: rotateZ(90deg) translateY(-100px);
+    }
+}
+
+@keyframes roll {
+    to {
+        transform: rotate(350deg) scale(0.7);
+    }
+}
+
+#controls {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+#resetBtn,
+#spawnBtn {
+    font-weight: bold;
+    padding: 8px 16px;
+}
