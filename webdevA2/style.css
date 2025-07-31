@@ -403,7 +403,6 @@ td {
 }
 
 /* css for bowling game */
-
 #page5 h2 {
     color: #030303;
 }
@@ -437,7 +436,7 @@ td {
 .lane {
     position: relative;
     top: -150px;
-    height: 500px;
+    height: 400px;
     width: 300px;
     background-color: bisque;
     margin: auto;
@@ -687,33 +686,28 @@ td {
         flex: 1 1 100%;
     }
 
-    .prev {
-        left: 70px;
-    }
-
-    .next {
-        right: 70px;
-    }
-
     .imgAlign img {
         display: none;
     }
 
+    #page5 {
+        overflow-x: hidden;
+    }
+
     .pins-wrapper {
         width: 100%;
-        max-width: 250px;
         margin: 100px auto 0 auto;
     }
 
     .pin::before {
-        left: 4px;
+        left: 2px;
     }
 
     .pin::after {
-        left: 8px;
+        left: 5px;
     }
 
-    .ball, .lane {
+    .ball {
         touch-action: none;
     }
 
