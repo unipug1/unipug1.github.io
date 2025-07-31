@@ -706,7 +706,7 @@ td {
     }
 
     .pin::after {
-        left: -0.1px;
+        left: 0px;
     }
 
     .ball {
