@@ -33,6 +33,7 @@
 
 body {
     background-color: #F1EFEC;
+    overflow-x: hidden;
 }
 
 .page {
@@ -396,19 +397,14 @@ td {
     justify-content: center;
 }
 
-#btnFS, #btnWS {
+#btnFS,
+#btnWS {
     font-size: 1.1em;
 }
 
 /* css for bowling game */
 #page5 h2 {
     color: #030303;
-}
-
-.body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
 }
 
 .message {
@@ -483,7 +479,6 @@ td {
     border-top: none;
     border-bottom: none;
 }
-
 
 .ball {
     position: absolute;
@@ -668,6 +663,10 @@ td {
         margin-bottom: 10px;
     }
 
+    .scoring-content figure {
+        margin-left: 0;
+    }
+
     .accordion-item {
         flex: 1 1 100%;
     }
@@ -694,9 +693,28 @@ td {
         right: 70px;
     }
 
-    .imgAlign img, .footerText figcaption {
+    .imgAlign img {
         display: none;
     }
+
+    .pins-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin: 100px auto 0 auto;
+    }
+
+    .pin::before {
+        left: 4px;
+    }
+
+    .pin::after {
+        left: 8px;
+    }
+
+    .ball {
+        touch-action: none;
+    }
+
 }
 
 .menuShow {
