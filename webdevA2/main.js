@@ -249,9 +249,10 @@ function resetGame() {
 }
 
 function handleGrab(event) {
+    event.preventDefault();
     ball_drag = true;
-    ball_start_x = event.pageX;
-    ball_start_y = event.pageY;
+    ball_start_x = event.clientX;
+    ball_start_y = event.clientY;
 }
 
 function handleDragBall(event) {
@@ -259,14 +260,16 @@ function handleDragBall(event) {
         return;
     }
 
-    const mouseX = event.pageX;
-    const mouseY = event.pageY;
+    event.preventDefault();
+
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
 
     ball.style.top = mouseY - 30 + 'px';
     ball.style.left = mouseX - 30 + 'px';
 
-    ball_end_x = event.pageX;
-    ball_end_y = event.pageY;
+    ball_end_x = mouseX;
+    ball_end_y = mouseY;
 
     adjustGuide();
 }
