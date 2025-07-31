@@ -128,6 +128,10 @@ figcaption {
     text-align: center;
 }
 
+button {
+    color: black;
+}
+
 nav ul li {
     display: inline;
 }
@@ -700,11 +704,11 @@ td {
     }
 
     .pin::before {
-        left: 2px;
+        left: 1px;
     }
 
     .pin::after {
-        left: 5px;
+        left: 3px;
     }
 
     .ball {
