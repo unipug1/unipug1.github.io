@@ -34,13 +34,12 @@
 body {
     background-color: #F1EFEC;
     overflow-x: hidden;
+    height: 100%;
 }
 
 .page {
     width: 100%;
-    /* adjust width to be 100% of viewport */
     height: 100%;
-    /* set height to 100% of viewport height */
 }
 
 header {
@@ -713,7 +712,6 @@ td {
     .ball {
         touch-action: none;
     }
-
 }
 
 .menuShow {
