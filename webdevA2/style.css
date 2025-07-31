@@ -315,9 +315,9 @@ legend {
     vertical-align: top;
     position: relative;
     overflow: hidden;
-    width: 65%;
+    width: 100%;
     height: auto;
-    padding-top: 36.56%;
+    padding-top: 56.25%;
     margin-left: 30px;
 }
 
@@ -663,6 +663,10 @@ td {
         margin-bottom: 10px;
     }
 
+    .rules-video {
+        margin-left: 0px;
+    }
+
     .scoring-content figure {
         margin-left: 0;
     }
@@ -699,7 +703,7 @@ td {
 
     .pins-wrapper {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
         margin: 100px auto 0 auto;
     }
 
