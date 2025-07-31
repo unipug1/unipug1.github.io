@@ -704,11 +704,11 @@ td {
     }
 
     .pin::before {
-        left: 1px;
+        left: 0px;
     }
 
     .pin::after {
-        left: 3px;
+        left: 0px;
     }
 
     .ball {
