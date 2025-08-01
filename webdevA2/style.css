@@ -29,17 +29,23 @@
     font-family: 'Nunito Sans', sans-serif;
     /* primary font: nunito sans, fallback to sans-serif */
     list-style-position: inside;
+    /* make bullet points or number appear inside content box of list item */
 }
 
 body {
     background-color: #F1EFEC;
+    /* change background color for entire page */
     overflow-x: hidden;
+    /* prevent horizontal scrolling */
     height: 100%;
+    /* take up full viewport height */
 }
 
 .page {
     width: 100%;
+    /* make page width take up full width of its container */
     height: 100%;
+    /* make page height take up full height of its container */
 }
 
 header {
@@ -57,28 +63,39 @@ header {
 
 nav button {
     width: 150px;
+    /* set fixed width for navigation buttons */
     height: 45px;
+    /* set fixed height for navigation buttons */
     font-size: 1em;
 }
 
 nav button::before {
     content: '';
+    /* create pseudo-element to place icons */
     position: absolute;
+    /* position absolutely relative to button */
     display: block;
+    /* pseudo-element behaves like a block */
     background-image: url('images/css_sprites.png');
+    /* using sprite sheet for icons */
     background-repeat: no-repeat;
+    /* prevent background from repeating */
 }
 
 nav button.homeSprite::before {
     width: 35px;
+    /* set sprite width */
     height: 35px;
+    /* set sprite height */
     background-position: -10px -10px;
+    /* position of home icon in the sprite sheet */
 }
 
 nav button.ruleSprite::before {
     width: 35px;
     height: 35px;
     background-position: -65px -10px;
+    /* position of rules icon in the sprite sheet */
 }
 
 nav button:hover {
@@ -101,6 +118,7 @@ h2 {
     font-size: 1.8em;
     font-weight: 600;
     margin: 40px 0 20px 0;
+    /* set top margin to 40px, right and left margin to 0px and bottom margin to 20px */
 }
 
 h3 {
@@ -133,10 +151,12 @@ button {
 
 nav ul li {
     display: inline;
+    /* make elements line up side by side */
 }
 
 #menuBtn {
     display: none;
+    /* dont show menu when breakpoint is >800px */
 }
 
 footer {
@@ -165,7 +185,9 @@ footer {
 .accordion-text,
 .form-content {
     display: flex;
+    /* using flexbox */
     align-items: flex-start;
+    /* align items at the top of container */
 }
 
 .intro-text,
@@ -175,16 +197,19 @@ footer {
 .scoring-text,
 .form-text {
     display: flex;
+    /* using flexbox */
     flex-direction: column;
+    /* arrange children vertically from top to bottom */
     margin-bottom: 20px;
-    vertical-align: top;
 }
 
 .intro img,
 .types img {
     margin-left: 50px;
     max-width: 100%;
+    /* ensure image does not exceed container width */
     vertical-align: top;
+    /* aligns top of image to the top of container */
 }
 
 .types img {
@@ -193,9 +218,13 @@ footer {
 
 .history-content {
     display: flex;
+    /* uses flexbox */
     justify-content: center;
+    /* center items horizontally along main axis */
     align-items: center;
+    /* center items vertically along cross axis */
     gap: 20px;
+    /* set 20px space between flex items */
 }
 
 .history h3 {
@@ -205,29 +234,37 @@ footer {
 .history-text {
     max-width: 500px;
     margin: 0 20px;
+    /* top and bottom margin: 0; left and right margin: 20 */
     text-align: center;
 }
 
 .history img {
     width: auto;
+    /* automatically adjust width to maintain aspect ratio */
     height: 200px;
+    /* set fixed height */
 }
 
 .equipment-text {
     flex: 1;
+    /* make flex item gor and fill available space equally */
 }
 
 .slider {
     position: relative;
     width: 100%;
+    /* take up full width of its container */
     margin: auto;
+    /* center element horizontally within its container */
     overflow: hidden;
+    /* hide slides outside visible area */
     flex: 1;
 }
 
 .slides {
     width: 100%;
     height: auto;
+    /* make height adjust automatically */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -237,32 +274,44 @@ footer {
 
 .slider img {
     display: none;
+    /* hide all images by default */
 }
 
 img.displaySlide {
     display: block;
+    /* show active image */
     animation-name: fade;
+    /* apply fade animation*/
     animation-duration: 1.0s;
+    /* animation lasts for 1 second */
 }
 
 .slider button {
     position: absolute;
     top: 50%;
+    /* move top edge of button to center of container */
     transform: translateY(-50%);
+    /* shifts button up by half of its own height to ccenter it vertically */
     font-size: 1.2rem;
     padding: 10px 15px;
+    /* top and bottom padding: 10; left and right padding: 15 */
     background-color: rgba(0, 0, 0, 0.5);
+    /* change background color to black but with 50% transparency */
     color: white;
     border: none;
+    /* remove borders */
     cursor: pointer;
+    /* shows hand cursor on hover */
 }
 
 .prev {
     left: 25px;
+    /* move prev button 25px from left edge */
 }
 
 .next {
     right: 25px;
+    /* move next button 25px from right edge */
 }
 
 .dots {
@@ -275,33 +324,26 @@ img.displaySlide {
     margin: 0 5px;
     background-color: #bbb;
     border-radius: 50%;
+    /* make square into circle by rounding each corner by 50% of element width and height */
     display: inline-block;
+    /* let elements sit side by side */
 }
 
 .dot.active {
     background-color: #717171;
 }
 
-/* css for quiz */
-fieldset,
-#submitBtn,
-#resetQuizBtn,
-#scoreBox {
-    font-size: 1.1em;
-}
-
-legend {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
 @keyframes fade {
+
+    /* fade animation from semi transparent to fully visible */
     from {
         opacity: 0.5
+            /* start at 50% transparency */
     }
 
     to {
         opacity: 1
+            /* end at full opacity */
     }
 }
 
@@ -319,12 +361,15 @@ legend {
     position: relative;
     overflow: hidden;
     width: 100%;
+    /* 16:9 aspect ratio 100% width */
     height: auto;
     padding-top: 56.25%;
+    /* padding-top = 9 / 16 times 100% = 56.25% */
     margin-left: 30px;
 }
 
 .rules-video iframe {
+    /* iframe fit in video container div with full height and width */
     position: absolute;
     top: 0;
     left: 0;
@@ -346,6 +391,19 @@ td {
     font-size: 1.1em;
 }
 
+/* css for quiz */
+fieldset,
+#submitBtn,
+#resetQuizBtn,
+#scoreBox {
+    font-size: 1.1em;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
 /* technique section */
 #page4 h3 {
     text-align: center;
@@ -362,12 +420,14 @@ td {
 .accordion-container {
     display: flex;
     flex-wrap: wrap;
+    /* wrap to new line if needed */
     gap: 20px
 }
 
 .accordion-item {
     margin-bottom: 5px;
     flex: 0 1 calc(50% - 10px);
+    /* two elements per row, accounting for gap */
     padding: 0.5rem;
 }
 
@@ -379,24 +439,33 @@ td {
 }
 
 .accordion-content {
+    /* hidden by default with expand/collapse animation */
     max-height: 0;
+    /* starts collapsed */
     transition: max-height 0.3s ease;
+    /* animate height changes */
     padding: 0 10px;
+    /* left and right padding only */
     overflow: hidden;
+    /* hide content that exceeds max-height */
     background-color: #D4C9BE;
     border-bottom-left-radius: 10px;
+    /* rounded bottom corners */
     border-bottom-right-radius: 10px;
 }
 
 .accordion-content.active {
     padding: 10px;
+    /* full padding when expanded */
     max-height: 1000px;
+    /* to show all content */
 }
 
 /* qr code css */
 .imgAlign {
     display: flex;
     justify-content: center;
+    /* center qr code horizontally */
 }
 
 #btnFS,
@@ -413,12 +482,14 @@ td {
     position: absolute;
     width: 100px;
     font-size: 3em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #123458;
     top: 300px;
-    left: calc(50% - 50px);
+    /* position 300px from top */
+    left: calc(50% - 70px);
+    /* center horizontally by shifting left by half element's width */
     z-index: 1;
-    margin: 0;
-    padding: 0;
+    /* layer above other content */
 }
 
 .pins-wrapper {
@@ -426,11 +497,13 @@ td {
     margin-top: 100px;
     padding: 10px;
     height: fit-content;
+    /* adjust height to match content size */
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    /* arrange items horizontally */
     justify-content: center;
     height: 25px;
 }
@@ -438,12 +511,15 @@ td {
 .lane {
     position: relative;
     top: -150px;
+    /* move element up by 150px */
     height: 400px;
     width: 300px;
     background-color: bisque;
     margin: auto;
     transform: perspective(100px) rotateX(10deg);
+    /* 3d perspective with slight forward tilt */
     z-index: -1;
+    /* layer behind other elements */
 }
 
 .pin {
@@ -451,20 +527,27 @@ td {
     height: 50px;
     width: 30px;
     border-radius: 50% 50% 40% 40%;
+    /* rounded top and slightly less rounded bottom corner for pin shape; top-left and right: 50% rounded; bottom right and left: 40% rounded */
     border: solid black;
+    /* black outline around pin */
     background: radial-gradient(white 0 50%, gray 90%);
+    /* uses gradient fill, white 0 50% - center up to 50% is while; grey 90% - gradually change to gray from 50% to 90%; by 90% - color is fully grey*/
 }
 
 .pin::before {
     display: block;
     position: relative;
     top: -32px;
+    /* move up 32px to position correctly on .pin */
     left: 1px;
+    /* move right by 1px for alignment */
     content: '';
+    /* create a pseudo-element to place top of pin */
     height: 20px;
     width: 20px;
     border: solid black;
     border-radius: 50%;
+    /* make a circle */
     background: radial-gradient(white 0 50%, gray 90%);
 }
 
@@ -472,46 +555,64 @@ td {
     display: block;
     position: relative;
     content: '';
+    /* create pseudo-element to place middle of pin */
     top: -35px;
+    /* move up 35px to position correctly on .pin */
     left: 5px;
+    /* move right by 5px for aligment */
     width: 12px;
     height: 14px;
+    /* 2 layered linear gradient to create pattern */
     background: linear-gradient(90deg, gray 2%, transparent 30% 70%, gray 96%), linear-gradient(white 0 30%, red 30% 40%, white 40% 60%, red 60% 70%, white 70%);
+    /* first linear gradient: horizontal gradient, grey starting at 25%, transparent in middle area from 30% to 70%, grey near the edge */
+    /* second linear gradient: white top 30%, red area from 30% to 40%, white from 40% to 60%, red area from 60% to 70%, white below 70% */
     border: solid black;
     border-top: none;
+    /* remove top border */
     border-bottom: none;
+    /* remove bottom border */
 }
 
 .ball {
     position: absolute;
     top: 400px;
     left: calc(50% - 30px);
+    /* center ball horizontally (offset by 30px) */
     height: 60px;
     width: 60px;
     background: radial-gradient(ellipse at right bottom, white, blue, black);
+    /* ellipse - gradient oval-shaped based on element size, at right bottom - starts gradient at bottom right corner, color go from white to blue to black */
     border-radius: 50%;
+    /* makes a circle */
     border: solid black;
     cursor: grab;
+    /* cursor becomes a grab hand on hover */
     z-index: 1;
+    /* layer above elements with lower z-index */
 }
 
 .ball:active {
     cursor: grabbing;
+    /* cursor becomes a grabbing hand when ball is clicked or dragged */
 }
 
 .ball::after {
     display: block;
     position: relative;
     content: '..';
+    /* shows 2 dots inside the ball */
     transform: rotate(45deg);
-    word-wrap: break-word;
+    /* rotate dots by 45 deg */
     height: 30px;
     width: 20px;
     border-radius: 50%;
     color: white;
+    /* set text '..' to white */
     font-size: 40px;
     top: 10px;
+    /* move down by 10px */
     left: 20px;
+    /* move right by 20px */
 }
 
 .ball-guide {
@@ -525,40 +626,48 @@ td {
 
 .fall-left {
     animation-name: fall-left;
+    /* uses keyframes named 'fall-left' */
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    /* keep final state after animation ends */
 }
 
 .fall-right {
     animation-name: fall-right;
+    /* uses keyframes named 'fall-right' */
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
 .roll {
     animation-name: roll;
+    /* uses keyframes named 'roll' */
     animation-duration: 2s;
 }
 
 .hidden {
+    /* hide message by default */
     display: none;
 }
 
 @keyframes fall-left {
     to {
         transform: rotateZ(-90deg) translateY(-100px);
+        /* rotates left and moves upward */
     }
 }
 
 @keyframes fall-right {
     to {
         transform: rotateZ(90deg) translateY(-100px);
+        /* rotates right and move upwards */
     }
 }
 
 @keyframes roll {
     to {
         transform: rotate(350deg) scale(0.7);
+        /* spins almost full circle and shrinks to give illusion of depth as ball rolls away */
     }
 }
 
@@ -580,6 +689,7 @@ td {
 }
 
 @media (max-width: 800px) {
+    /* if width <= 800px */
 
     nav ul li {
         display: block;
@@ -652,6 +762,7 @@ td {
     .form-content {
         display: flex;
         flex-direction: column;
+        /* arrange items vertically from top to bottom */
         align-items: center;
     }
 
@@ -686,14 +797,17 @@ td {
 
     .accordion-item {
         flex: 1 1 100%;
+        /* allow item to gorw, shrink and start with full width of container */
     }
 
     .imgAlign img {
+        /* hide QR code on mobile */
         display: none;
     }
 
     #page5 {
         overflow-x: hidden;
+        /* prevent horizontal scrolling */
     }
 
     .pins-wrapper {
@@ -708,10 +822,12 @@ td {
     .pin::after {
         left: 0;
         transform: translateX(3.5px);
+        /* move middle of pin right by 3.5px */
     }
 
     .ball {
         touch-action: none;
+        /* disable default touch behaviours like zooming on touch devices */
     }
 }
 
