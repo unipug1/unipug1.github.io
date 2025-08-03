@@ -391,7 +391,7 @@ function handleThrowBall() {
 // adjust angle and length of ball guide based on drag direction
 function adjustGuide() {
     let { adj, angle_rad } = angleCalc(); // get length and angle from calculation function
-    ballGuide.style.height = adj + 'px'; 
+    ballGuide.style.height = adj + 'px';
     ballGuide.style.transform = "perspective(100px) rotate(" + (-angle_rad) + "rad)"; // rotate guide to match throw angle
 }
 
