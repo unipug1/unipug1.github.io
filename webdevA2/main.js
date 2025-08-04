@@ -130,7 +130,7 @@ nextBtn.addEventListener("click", nextSlide);
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 // loop through each accordion header 
-for (var i = 0; i < accordionHeaders.length; i++) {
+for (let i = 0; i < accordionHeaders.length; i++) {
     // add click event listener to each header 
     accordionHeaders[i].addEventListener("click", function () {
         // get parent element of clicked header which is the accordion item
