@@ -452,6 +452,7 @@ legend {
     border-bottom-left-radius: 10px;
     /* rounded bottom corners */
     border-bottom-right-radius: 10px;
+    text-align: center;
 }
 
 .accordion-content.active {
